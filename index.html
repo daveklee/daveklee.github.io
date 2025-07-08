@@ -1,22 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7VBC62TJ55"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-7VBC62TJ55', {
-            page_title: 'Dave Klee - Media Technology & Operations Leader',
-            anonymize_ip: true,
-            cookie_flags: 'SameSite=None;Secure'
-        });
-    </script>
-    
     <title>Dave Klee - Media Technology & Operations Leader</title>
     <link rel="stylesheet" href="static/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,13 +28,27 @@
                     <li><a href="#talks">Talks</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="nav-toggle">
+                <div class="nav-toggle" id="nav-toggle" aria-label="Open navigation" tabindex="0">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
             </nav>
         </header>
+
+        <!-- Mobile Nav Overlay -->
+        <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile Navigation">
+            <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close navigation">&times;</button>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#media-supply-chain">Media Supply Chain</a></li>
+                <li><a href="#time-lapse">Time Lapse</a></li>
+                <li><a href="#coding">Coding</a></li>
+                <li><a href="#talks">Talks</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
 
         <!-- Hero Section -->
         <section class="hero">
@@ -62,6 +63,26 @@
                     </div>
                 </div>
                 <div class="hero-visual">
+                    
+                    <div class="floating-card">
+                        <i class="fas fa-cloud"></i>
+                        <span>Cloud</span>
+                    </div>
+                    
+                    <div class="floating-card">
+                        <i class="fas fa-video"></i>
+                        <span>Time Lapse</span>
+                    </div>
+                    
+                    <div class="floating-card">
+                        <i class="fas fa-code"></i>
+                        <span>Code</span>
+                    </div>
+                    
+                    <div class="floating-card">
+                        <i class="fas fa-film"></i>
+                        <span>Media</span>
+                    </div>
                     
                 </div>
             </div>

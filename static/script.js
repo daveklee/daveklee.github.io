@@ -313,4 +313,33 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     `;
     document.head.appendChild(particleStyle);
+
+    // --- MOBILE NAV OVERLAY LOGIC ---
+    const mobileNav = document.getElementById('mobile-nav');
+    const navToggleBtn = document.getElementById('nav-toggle');
+    const mobileNavClose = document.getElementById('mobile-nav-close');
+    const mobileNavLinks = mobileNav ? mobileNav.querySelectorAll('a') : [];
+
+    function openMobileNav() {
+        if (mobileNav) mobileNav.classList.add('open');
+        if (navToggleBtn) navToggleBtn.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeMobileNav() {
+        if (mobileNav) mobileNav.classList.remove('open');
+        if (navToggleBtn) navToggleBtn.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    if (navToggleBtn) {
+        navToggleBtn.addEventListener('click', openMobileNav);
+        navToggleBtn.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') openMobileNav();
+        });
+    }
+    if (mobileNavClose) {
+        mobileNavClose.addEventListener('click', closeMobileNav);
+    }
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', closeMobileNav);
+    });
 }); 
