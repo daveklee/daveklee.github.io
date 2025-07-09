@@ -700,6 +700,72 @@ p {
     .contact-item {
         padding: 20px;
     }
+
+    /* HERO SECTION IMPROVEMENTS */
+    .hero {
+        padding-bottom: 0;
+        margin-bottom: 18px;
+        border-bottom: 1px solid var(--border-light);
+    }
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    .hero-buttons .btn {
+        width: 100%;
+        min-width: 0;
+        font-size: 1.1rem;
+    }
+    /* ABOUT SECTION IMPROVEMENTS */
+    .about-grid {
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .about-text {
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    .about-text p {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+    }
+    .about-stats {
+        gap: 14px;
+    }
+    .stat-card {
+        padding: 16px;
+        font-size: 1rem;
+    }
+    .stat-card h3 {
+        font-size: 1.5rem;
+    }
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 1.2rem;
+    }
+    .social-link {
+        padding: 14px 12px;
+        font-size: 1rem;
+        min-width: 0;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    /* Divider between hero and about for mobile */
+    .hero + .section {
+        border-top: none;
+        margin-top: 0;
+        padding-top: 18px;
+    }
 }
 
 /* Smooth Scrolling */
